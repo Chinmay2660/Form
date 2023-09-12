@@ -16,43 +16,48 @@
         <img src="./images/jio-logo.png" alt="Jio Logo" width="50px">
         <h1>DSM Team</h1>
     </div>
+
     <div class="info">
         <h2>Info</h2>
-        <form action="/" method="post">
+        <form action="/" method="post" id="info-form">
             <div class="form-group">
-                <label for="fname">First name:</label>
-                <input class="input-text" type="text" id="fname" name="fname" placeholder="Enter your First Name">
+                <label for="fname">First Name*</label>
+                <input class="input-text" type="text" id="fname" name="fname" placeholder="Enter your First Name"
+                    required>
             </div>
             <div class="form-group">
-                <label for="lname">Last name:</label>
-                <input class="input-text" type="text" id="lname" name="lname" placeholder="Enter your Last Name">
+                <label for="lname">Last Name*</label>
+                <input class="input-text" type="text" id="lname" name="lname" placeholder="Enter your Last Name"
+                    required>
             </div>
             <div class="form-group">
-                <label for="email">Enter your email:</label>
-                <input class="input-text" type="email" id="email" name="email" placeholder="Enter your Email">
+                <label for="email">Enter your Email*</label>
+                <input class="input-text" type="email" id="email" name="email" placeholder="Enter your Email" required>
             </div>
             <div class="form-group">
-                <label for="dob">Date of Birth:</label>
+                <label for="dob">Date of Birth</label>
                 <input class="input-text" type="date" id="dob" name="dob">
             </div>
             <div class="form-group">
-                <label for="address">Address:</label>
+                <label for="address">Address</label>
                 <textarea class="input-text" rows="3" cols="20" id="address" name="address"
                     placeholder="Enter Address"></textarea>
             </div>
         </form>
-        <button onclick="addToTable()">Submit</button>
+        <button type="submit">Submit</button>
     </div>
 
-    <div class="table-section">
+
+    <div class="table-section" id="table-container" style="display: none;">
         <table id="data">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Date of Birth</th>
-                <th>Address</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
         </table>
     </div>
 
