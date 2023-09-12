@@ -2,10 +2,10 @@ function addToTable() {
   var firstName = document.getElementById("fname").value;
   var lastName = document.getElementById("lname").value;
   var email = document.getElementById("email").value;
-  var dateOfBirth = document.getElementById("dob").value;
+  var dob = document.getElementById("dob").value;
   var address = document.getElementById("address").value;
 
-  var table = document.querySelector("#dataTable tbody");
+  var table = document.querySelector("#data");
 
   var row = table.insertRow();
 
@@ -18,7 +18,7 @@ function addToTable() {
   cell1.innerHTML = firstName;
   cell2.innerHTML = lastName;
   cell3.innerHTML = email;
-  cell4.innerHTML = dateOfBirth;
+  cell4.innerHTML = dob;
   cell5.innerHTML = address;
 
   document.getElementById("fname").value = "";
