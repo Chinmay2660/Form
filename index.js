@@ -1,14 +1,3 @@
-function initializeTable() {
-  const table = document.querySelector("#data");
-  const thead = table.createTHead();
-  const row = thead.insertRow();
-  const cell1 = row.insertCell(0);
-  const cell2 = row.insertCell(1);
-  const cell3 = row.insertCell(2);
-}
-
-window.onload = initializeTable;
-
 document.querySelector("button").addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -83,12 +72,3 @@ function isValidEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);
 }
-
-function getCurrentDate() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
-document.getElementById("dob").setAttribute("max", getCurrentDate());

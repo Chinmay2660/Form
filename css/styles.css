@@ -85,35 +85,28 @@ button:hover {
 }
 
 .table-section {
-  display: none;
-}
-
-.error-message {
-  color: #ff0000;
-  font-size: 14px;
-  margin-top: 5px;
-  display: none;
+  display: flex;
+  align-items: center;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 14px;
+  border-spacing: 0;
+  border-radius: 10px;
 }
 
 th,
 td {
-  padding: 10px;
+  padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
 th {
   background-color: #0f3cc9;
   color: white;
-}
-
-tr:hover {
-  background-color: #f5f5f5;
+  border: 1px solid #0f3cc9;
 }
