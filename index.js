@@ -1,31 +1,31 @@
-function addDataToTable() {
+function addToTable() {
   var firstName = document.getElementById("fname").value;
   var lastName = document.getElementById("lname").value;
   var email = document.getElementById("email").value;
-  var dateOfBirth = document.getElementById("birthday").value;
+  var dateOfBirth = document.getElementById("dob").value;
   var address = document.getElementById("address").value;
 
-  var tableBody = document.querySelector("#dataTable tbody");
+  var table = document.querySelector("#dataTable tbody");
 
-  var newRow = tableBody.insertRow();
+  var row = table.insertRow();
 
-  var cell1 = newRow.insertCell(0);
-  var cell2 = newRow.insertCell(1);
-  var cell3 = newRow.insertCell(2);
-  var cell4 = newRow.insertCell(3);
-  var cell5 = newRow.insertCell(4);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
 
-  cell1.textContent = firstName;
-  cell2.textContent = lastName;
-  cell3.textContent = email;
-  cell4.textContent = dateOfBirth;
-  cell5.textContent = address;
+  cell1.innerHTML = firstName;
+  cell2.innerHTML = lastName;
+  cell3.innerHTML = email;
+  cell4.innerHTML = dateOfBirth;
+  cell5.innerHTML = address;
 
   document.getElementById("fname").value = "";
   document.getElementById("lname").value = "";
   document.getElementById("email").value = "";
-  document.getElementById("birthday").value = "";
+  document.getElementById("dob").value = "";
   document.getElementById("address").value = "";
 }
 
-document.querySelector("button").addEventListener("click", addDataToTable);
+document.querySelector("button").addEventListener("click", addToTable);
