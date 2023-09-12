@@ -28,7 +28,6 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 20px;
   padding: 10px 10px;
   margin: 40px 80px;
   background-color: #ffffff;
@@ -86,27 +85,25 @@ button:hover {
 
 .table-section {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  width: 22%;
   font-size: 14px;
   border-spacing: 0;
-  border-radius: 10px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  margin: 20px 0px;
 }
 
 th,
 td {
-  padding: 8px;
+  padding: 4px 8px;
   text-align: left;
-  border: 1px solid #ddd;
-}
-
-th {
-  background-color: #0f3cc9;
-  color: white;
-  border: 1px solid #0f3cc9;
+  border: 1px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -1,14 +1,26 @@
 document.querySelector("button").addEventListener("click", function (event) {
   event.preventDefault();
+  const currentDate = new Date();
+  const dobInput = document.getElementById("dob").value;
+  const dob = new Date(dobInput);
 
   if (!validateForm()) {
+    return;
+  }
+
+  if (!dobInput) {
+    alert("Please enter your Date of Birth");
+    return;
+  }
+
+  if (dob > currentDate) {
+    alert("Date of Birth cannot be in the future");
     return;
   }
 
   const firstName = document.getElementById("fname").value;
   const lastName = document.getElementById("lname").value;
   const email = document.getElementById("email").value;
-  const dob = document.getElementById("dob").value;
   const address = document.getElementById("address").value;
 
   const tableBody = document.getElementById("table-body");
@@ -17,7 +29,7 @@ document.querySelector("button").addEventListener("click", function (event) {
     { key: "First Name", value: firstName },
     { key: "Last Name", value: lastName },
     { key: "Email", value: email },
-    { key: "Date of Birth", value: dob },
+    { key: "Date of Birth", value: dob.toLocaleDateString() },
     { key: "Address", value: address },
   ];
 
@@ -33,19 +45,16 @@ document.querySelector("button").addEventListener("click", function (event) {
     cell3.innerHTML = item.value;
   });
 
-  document.getElementById("fname").value = "";
-  document.getElementById("lname").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("dob").value = "";
-  document.getElementById("address").value = "";
-
-  document.getElementById("table-container").style.display = "block";
+  clearForm();
+  showTable();
 });
 
 function validateForm() {
   const firstName = document.getElementById("fname").value;
   const lastName = document.getElementById("lname").value;
   const email = document.getElementById("email").value;
+  const dob = document.getElementById("dob").value;
+  const address = document.getElementById("address").value;
 
   if (firstName.trim() === "") {
     alert("Please enter your First Name");
@@ -65,10 +74,29 @@ function validateForm() {
     return false;
   }
 
+  if (!dob) {
+    alert("Please enter your Date of Birth");
+    return false;
+  }
+
+  if (address.trim() === "") {
+    alert("Please enter your Address");
+    return false;
+  }
+
   return true;
 }
 
 function isValidEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);
+}
+
+function clearForm() {
+  const formElements = document.querySelectorAll(".input-text");
+  formElements.forEach((element) => (element.value = ""));
+}
+
+function showTable() {
+  document.getElementById("table-container").style.display = "block";
 }
