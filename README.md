@@ -8,7 +8,6 @@ This is a simple web application that allows users to submit their personal info
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
