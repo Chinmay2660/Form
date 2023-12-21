@@ -6,7 +6,6 @@ This is a simple web application that allows users to submit their personal info
 
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Contributing](#contributing)
 
 ## Features
