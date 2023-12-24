@@ -27,7 +27,7 @@ To get a local copy of this project up and running, follow these steps:
 
 2. Open the index.html file in your web browser to view the application.
 
-##Usage
+## Usage
 
 1. Fill out the form with your personal information, including your first name, last name, email, date of birth, and address.
 
